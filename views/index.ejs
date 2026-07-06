@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Akademik</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icon -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="/css/style.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- =========================================
+     SIDEBAR
+========================================= -->
+
+<aside class="sidebar">
+
+    <!-- LOGO -->
+
+    <div class="logo text-center">
+
+        <img src="/images/logo polbeng.png"
+             class="logo-kampus">
+
+        <h7 class="mt-2 fw-bold">
+
+            Kampus Vokasi
+
+        </h5>
+
+        <p>
+
+            Politeknik Negeri Bengkalis
+
+        </p>
+
+    </div>
+
+    <hr>
+
+    <!-- MENU -->
+
+    <ul class="sidebar-menu">
+
+        <!-- HOME -->
+        <li class="menu active"
+            data-page="dashboard">
+
+            <i class="bi bi-house-door-fill"></i>
+
+            <span>Home</span>
+
+        </li>
+
+        <!-- PROFILE -->
+        <li class="menu"
+            data-page="profile">
+
+            <i class="bi bi-person-circle"></i>
+
+            <span>Profile</span>
+
+        </li>
+
+        <!-- LOGOUT -->
+        <li class="menu"
+            data-page="logout">
+
+            <i class="bi bi-box-arrow-right"></i>
+
+            <span>Logout</span>
+
+        </li>
+
+    </ul>
+
+    <!-- FOOTER -->
+
+    <div class="sidebar-footer">
+
+        <hr>
+
+        <small>
+
+            Version 2.0
+
+        </small>
+
+    </div>
+
+</aside>
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="content">
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<nav class="navbar-custom">
+
+    <div>
+
+        <h1 class="fw-bold text-primary">
+
+            Dashboard Akademik
+
+        </h1>
+
+        <p class="text-secondary mb-1">
+
+            Perancangan dan Pemeliharaan
+            Perangkat Lunak
+
+        </p>
+
+        <small class="text-muted">
+
+            Semester 6 • Teknik Informatika
+
+        </small>
+
+    </div>
+
+    <!-- PROFILE NAVBAR -->
+
+    <div class="navbar-profile-box">
+
+        <div class="text-end me-3">
+
+            <h3 id="jamDigital"
+                class="fw-bold text-primary mb-0">
+
+                00:00:00
+
+            </h3>
+
+            <small id="tanggal">
+
+                Senin, 1 Januari 2026
+
+            </small>
+
+        </div>
+
+        <img src="/images/profil.jpg"
+             class="navbar-profile">
+
+        <div class="ms-3">
+
+            <h4 class="mb-1">
+
+                Supriyanto
+
+            </h4>
+
+            <span class="badge bg-success">
+
+                Mahasiswa Aktif
+
+            </span>
+
+        </div>
+
+    </div>
+
+</nav>
+<!-- =========================================
+     DASHBOARD PAGE
+========================================= -->
+
+<section id="dashboard-page">
+
+<!-- =========================================
+     WELCOME CARD
+========================================= -->
+
+<div class="card welcome-card shadow-lg border-0 mb-4">
+
+    <div class="card-body p-5">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-8">
+
+                <h1 class="fw-bold text-primary">
+
+                    Selamat Datang 👋
+
+                </h1>
+
+                <p class="lead text-secondary">
+
+                    Dashboard Akademik dibuat menggunakan
+                    Node.js,
+                    Express.js,
+                    EJS,
+                    Bootstrap 5,
+                    dan Chart.js.
+
+                </p>
+
+                <div class="mt-4">
+
+                    <button class="btn btn-primary px-4 me-2">
+
+                        <i class="bi bi-person-fill"></i>
+
+                        Lihat Profil
+
+                    </button>
+
+                    <button class="btn btn-outline-primary px-4">
+
+                        <i class="bi bi-download"></i>
+
+                        Download
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 text-center">
+
+                <i class="bi bi-mortarboard-fill welcome-icon"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================================
+     QUICK MENU
+========================================= -->
+
+<div class="row g-4 mb-4">
+
+    <!-- MENU 1 -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="card quick-card border-0 shadow h-100">
+
+            <div class="card-body text-center">
+
+                <i class="bi bi-person-plus-fill
+                          display-4 text-primary"></i>
+
+                <h5 class="mt-3">
+
+                    Tambah Mahasiswa
+
+                </h5>
+
+                <p class="text-muted small">
+
+                    Menambahkan data mahasiswa baru.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MENU 2 -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="card quick-card border-0 shadow h-100">
+
+            <div class="card-body text-center">
+
+                <i class="bi bi-book-half
+                          display-4 text-success"></i>
+
+                <h5 class="mt-3">
+
+                    Mata Kuliah
+
+                </h5>
+
+                <p class="text-muted small">
+
+                    Melihat daftar mata kuliah.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MENU 3 -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="card quick-card border-0 shadow h-100">
+
+            <div class="card-body text-center">
+
+                <i class="bi bi-bar-chart-fill
+                          display-4 text-warning"></i>
+
+                <h5 class="mt-3">
+
+                    Statistik
+
+                </h5>
+
+                <p class="text-muted small">
+
+                    Statistik akademik mahasiswa.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MENU 4 -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="card quick-card border-0 shadow h-100">
+
+            <div class="card-body text-center">
+
+                <i class="bi bi-gear-fill
+                          display-4 text-danger"></i>
+
+                <h5 class="mt-3">
+
+                    Pengaturan
+
+                </h5>
+
+                <p class="text-muted small">
+
+                    Pengaturan dashboard aplikasi.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================================
+     CARD STATISTIK
+========================================= -->
+
+<div class="row g-4 mb-4">
+
+    <!-- CARD 1 -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="card statistik-card
+                    bg-primary text-white
+                    border-0 shadow">
+
+            <div class="card-body">
+
+                <div class="d-flex
+                            justify-content-between
+                            align-items-center">
+
+                    <div>
+
+                        <h6>Mahasiswa</h6>
+
+                        <h2 class="fw-bold">
+
+                            <%= mahasiswa.length %>
+
+                        </h2>
+
+                    </div>
+
+                    <i class="bi bi-people-fill
+                              display-4"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="card statistik-card
+                    bg-success text-white
+                    border-0 shadow">
+
+            <div class="card-body">
+
+                <div class="d-flex
+                            justify-content-between
+                            align-items-center">
+
+                    <div>
+
+                        <h6>Mata Kuliah</h6>
+
+                        <h2 class="fw-bold">
+
+                            12
+
+                        </h2>
+
+                    </div>
+
+                    <i class="bi bi-book-fill
+                              display-4"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="card statistik-card
+                    bg-warning text-dark
+                    border-0 shadow">
+
+            <div class="card-body">
+
+                <div class="d-flex
+                            justify-content-between
+                            align-items-center">
+
+                    <div>
+
+                        <h6>Dosen</h6>
+
+                        <h2 class="fw-bold">
+
+                            18
+
+                        </h2>
+
+                    </div>
+
+                    <i class="bi bi-person-workspace
+                              display-4"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="card statistik-card
+                    bg-danger text-white
+                    border-0 shadow">
+
+            <div class="card-body">
+
+                <div class="d-flex
+                            justify-content-between
+                            align-items-center">
+
+                    <div>
+
+                        <h6>Jurusan</h6>
+
+                        <h2 class="fw-bold">
+
+                            3
+
+                        </h2>
+
+                    </div>
+
+                    <i class="bi bi-building
+                              display-4"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- =========================================
+     GRAFIK
+========================================= -->
+
+<div class="row">
+
+    <!-- BAR CHART -->
+
+    <div class="col-lg-8 mb-4">
+
+        <div class="card border-0 shadow rounded-4">
+
+            <div class="card-header bg-primary text-white">
+
+                <h5 class="mb-0">
+
+                    <i class="bi bi-bar-chart-fill"></i>
+
+                    Statistik Mahasiswa
+
+                </h5>
+
+            </div>
+
+            <div class="card-body">
+
+                <canvas id="barChart"
+                        height="120"></canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PIE CHART -->
+
+    <div class="col-lg-4 mb-4">
+
+        <div class="card border-0 shadow rounded-4">
+
+            <div class="card-header bg-success text-white">
+
+                <h5 class="mb-0">
+
+                    <i class="bi bi-pie-chart-fill"></i>
+
+                    Persentase Jurusan
+
+                </h5>
+
+            </div>
+
+            <div class="card-body">
+
+                <canvas id="pieChart"
+                        height="220"></canvas>
+
+                <hr>
+
+                <!-- Progress -->
+
+                <p class="small mb-1">
+
+                    Teknik Informatika
+
+                </p>
+
+                <div class="progress mb-3">
+
+                    <div class="progress-bar bg-primary"
+                         style="width:55%">
+
+                        55%
+
+                    </div>
+
+                </div>
+
+                <p class="small mb-1">
+
+                    Sistem Informasi
+
+                </p>
+
+                <div class="progress mb-3">
+
+                    <div class="progress-bar bg-success"
+                         style="width:30%">
+
+                        30%
+
+                    </div>
+
+                </div>
+
+                <p class="small mb-1">
+
+                    Manajemen Informatika
+
+                </p>
+
+                <div class="progress">
+
+                    <div class="progress-bar bg-warning"
+                         style="width:15%">
+
+                        15%
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================================
+     PENGUMUMAN & JADWAL
+========================================= -->
+
+<div class="row mb-4">
+
+    <!-- PENGUMUMAN -->
+
+    <div class="col-lg-6">
+
+        <div class="card border-0 shadow rounded-4 h-100">
+
+            <div class="card-header bg-primary text-white">
+
+                <h5 class="mb-0">
+
+                    <i class="bi bi-megaphone-fill"></i>
+
+                    Pengumuman
+
+                </h5>
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="alert alert-success">
+
+                    ✅ Repository GitHub berhasil dibuat.
+
+                </div>
+
+                <div class="alert alert-info">
+
+                    🚀 CI/CD Pipeline berjalan otomatis.
+
+                </div>
+
+                <div class="alert alert-warning">
+
+                    🧪 Unit Testing menggunakan Jest.
+
+                </div>
+
+                <div class="alert alert-primary">
+
+                    🌐 Deployment berhasil dilakukan.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JADWAL -->
+
+    <div class="col-lg-6">
+
+        <div class="card border-0 shadow rounded-4 h-100">
+
+            <div class="card-header bg-success text-white">
+
+                <h5 class="mb-0">
+
+                    <i class="bi bi-calendar-event-fill"></i>
+
+                    Jadwal Hari Ini
+
+                </h5>
+
+            </div>
+
+            <div class="card-body">
+
+                <table class="table table-borderless">
+
+                    <tr>
+
+                        <th>Mata Kuliah</th>
+
+                        <td>
+
+                            Perancangan dan
+                            Pemeliharaan
+                            Perangkat Lunak
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Dosen</th>
+
+                        <td>
+
+                            Supriyanto
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Jam</th>
+
+                        <td>
+
+                            08.00 - 10.00 WIB
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Ruangan</th>
+
+                        <td>
+
+                            Lab Komputer 2
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- =========================================
+     DATA MAHASISWA
+========================================= -->
+
+<div class="card border-0 shadow rounded-4 mb-5">
+
+    <div class="card-header
+                bg-primary
+                text-white
+                d-flex
+                justify-content-between
+                align-items-center">
+
+        <h4 class="mb-0">
+
+            <i class="bi bi-table"></i>
+
+            Data Mahasiswa
+
+        </h4>
+
+        <!-- SEARCH -->
+
+        <input type="text"
+               id="searchInput"
+               class="form-control w-25"
+               placeholder="Cari mahasiswa...">
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="table-responsive">
+
+            <table class="table
+                          table-hover
+                          align-middle"
+                   id="mahasiswaTable">
+
+                <thead class="table-primary">
+
+                    <tr>
+
+                        <th>No</th>
+                        <th>Foto</th>
+                        <th>NIM</th>
+                        <th>Nama</th>
+                        <th>Jurusan</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <% mahasiswa.forEach((mhs,index)=>{ %>
+
+                    <tr>
+
+                        <td>
+
+                            <%= index + 1 %>
+
+                        </td>
+
+                        <td>
+
+                            <img src="/images/profil.jpg"
+                                 class="table-photo">
+
+                        </td>
+
+                        <td>
+
+                            <%= mhs.nim %>
+
+                        </td>
+
+                        <td>
+
+                            <%= mhs.nama %>
+
+                        </td>
+
+                        <td>
+
+                            <%= mhs.jurusan %>
+
+                        </td>
+
+                        <td>
+
+                            <span class="badge bg-success">
+
+                                Aktif
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <% }) %>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =========================================
+     PROFILE PAGE
+========================================= -->
+
+<section id="profile-page"
+         style="display:none;">
+
+    <div class="card border-0 shadow-lg rounded-4">
+
+        <div class="card-body p-5">
+
+            <div class="row">
+
+                <!-- FOTO -->
+
+                <div class="col-lg-4 text-center">
+
+                    <img src="/images/profil.jpg"
+                         class="profile-photo">
+
+                    <h2 class="mt-4 fw-bold">
+
+                        Sukri
+
+                    </h2>
+
+                    <p class="text-secondary">
+
+                        Teknik Informatika
+
+                    </p>
+
+                    <span class="badge bg-success fs-6">
+
+                        Mahasiswa Aktif
+
+                    </span>
+
+                    <hr>
+
+                    <button class="btn btn-primary w-100 mb-2">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        Email
+
+                    </button>
+
+                    <button class="btn btn-dark w-100">
+
+                        <i class="bi bi-github"></i>
+
+                        GitHub
+
+                    </button>
+
+                </div>
+
+                <!-- DATA -->
+
+                <div class="col-lg-8">
+
+                    <h3 class="text-primary mb-4">
+
+                        <i class="bi bi-person-vcard-fill"></i>
+
+                        Informasi Akademik
+
+                    </h3>
+
+                    <table class="table table-striped">
+
+                        <tr>
+
+                            <th width="250">
+
+                                Nama
+
+                            </th>
+
+                            <td>
+
+                                Sukri
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>NIM</th>
+
+                            <td>
+
+                                6304230018
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>Program Studi</th>
+
+                            <td>
+
+                                Teknik Informatika
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>Semester</th>
+
+                            <td>
+
+                                6
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>Kampus</th>
+
+                            <td>
+
+                                Politeknik Negeri Bengkalis
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>Mata Kuliah</th>
+
+                            <td>
+
+                                Perancangan dan
+                                Pemeliharaan
+                                Perangkat Lunak
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>Dosen Pengampu</th>
+
+                            <td>
+
+                                Supriyanto
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>Status</th>
+
+                            <td>
+
+                                <span class="badge bg-success">
+
+                                    Mahasiswa Aktif
+
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     LOGOUT PAGE
+========================================= -->
+
+<section id="logout-page"
+         style="display:none;">
+
+    <div class="card border-0 shadow-lg rounded-4">
+
+        <div class="card-body p-5 text-center">
+
+            <div class="mb-4">
+
+                <i class="bi bi-box-arrow-right
+                          text-danger"
+                   style="font-size:100px;"></i>
+
+            </div>
+
+            <h1 class="fw-bold text-danger">
+
+                Logout
+
+            </h1>
+
+            <p class="lead text-secondary">
+
+                Apakah kamu yakin ingin keluar
+                dari dashboard?
+
+            </p>
+
+            <div class="mt-4">
+
+                <!-- tombol logout -->
+
+                <button class="btn btn-danger
+                               px-4 py-2"
+                        id="btnLogout">
+
+                    <i class="bi bi-box-arrow-right"></i>
+
+                    Logout
+
+                </button>
+
+                <!-- tombol kembali -->
+
+                <button class="btn btn-primary
+                               px-4 py-2 ms-2"
+                        id="cancelLogout">
+
+                    <i class="bi bi-arrow-left"></i>
+
+                    Kembali
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</main>
+
+</div>
+
+<!-- =========================================
+     CHART JS
+========================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- =========================================
+     SCRIPT JS
+========================================= -->
+
+<script src="/js/script.js"></script>
+
+</body>
+
+</html>
