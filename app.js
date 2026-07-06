@@ -1,9 +1,3 @@
-/* ===========================================================
-   Dashboard Akademik
-   Politeknik Negeri Bengkalis
-   Node.js + Express + EJS
-=========================================================== */
-
 const express = require("express");
 const path = require("path");
 
