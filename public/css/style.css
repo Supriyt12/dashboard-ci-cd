@@ -891,5 +891,99 @@ body{
     font-size:14px;
 
 }
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 768px){
+
+    .wrapper{
+        flex-direction: column;
+    }
+
+    /* SIDEBAR */
+
+    .sidebar{
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+    }
+
+    .sidebar ul{
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .sidebar ul li{
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .sidebar-footer{
+        display: none;
+    }
+
+    /* CONTENT */
+
+    .content{
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* NAVBAR */
+
+    .navbar .container-fluid{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-profile{
+        margin-top: 15px;
+    }
+
+    /* CARD */
+
+    .card{
+        margin-bottom: 20px;
+    }
+
+    /* TABLE */
+
+    .table-responsive{
+        overflow-x: auto;
+    }
+
+    /* SEARCH */
+
+    #searchInput{
+        width: 100% !important;
+        margin-top: 10px;
+    }
+
+    /* PROFILE */
+
+    .profile-photo{
+        width: 120px;
+        height: 120px;
+    }
+
+    /* TEXT */
+
+    h1{
+        font-size: 28px;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+}
 
 }
