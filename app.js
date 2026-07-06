@@ -2,117 +2,72 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-/* ==========================================
-   View Engine
-========================================== */
+/* =========================================
+   VIEW ENGINE
+========================================= */
 
 app.set("view engine", "ejs");
+
 app.set("views", path.join(__dirname, "views"));
 
-/* ==========================================
-   Static Folder
-========================================== */
+/* =========================================
+   STATIC FILE
+========================================= */
 
 app.use(express.static(path.join(__dirname, "public")));
 
-/* ==========================================
-   Dummy Data Mahasiswa
-========================================== */
+/* =========================================
+   DATA MAHASISWA
+========================================= */
 
 const mahasiswa = [
 
     {
         nim: "6304230018",
-        nama: "Supriyanto",
+        nama: "Sukri",
         jurusan: "Teknik Informatika"
     },
 
     {
         nim: "6304230019",
-        nama: "Andi Saputra",
-        jurusan: "Teknik Informatika"
+        nama: "Andi",
+        jurusan: "Sistem Informasi"
     },
 
     {
         nim: "6304230020",
-        nama: "Budi Santoso",
-        jurusan: "Sistem Informasi"
-    },
-
-    {
-        nim: "6304230021",
-        nama: "Rina Marlina",
+        nama: "Budi",
         jurusan: "Manajemen Informatika"
-    },
-
-    {
-        nim: "6304230022",
-        nama: "Dewi Lestari",
-        jurusan: "Teknik Informatika"
-    },
-
-    {
-        nim: "6304230023",
-        nama: "Ahmad Fauzi",
-        jurusan: "Sistem Informasi"
     }
 
 ];
 
-/* ==========================================
-   Statistik Dashboard
-========================================== */
-
-const totalMahasiswa = mahasiswa.length;
-
-const totalMatkul = 12;
-const totalDosen = 18;
-const totalJurusan = 3;
-
-/* ==========================================
-   Home
-========================================== */
+/* =========================================
+   ROUTE
+========================================= */
 
 app.get("/", (req, res) => {
 
     res.render("index", {
 
-        mahasiswa,
-
-        totalMahasiswa,
-
-        totalMatkul,
-
-        totalDosen,
-
-        totalJurusan
+        mahasiswa
 
     });
 
 });
 
-/* ==========================================
-   404
-========================================== */
+/* =========================================
+   START SERVER
+========================================= */
 
-app.use((req, res) => {
+const PORT = process.env.PORT || 3000;
 
-    res.status(404).send(`
-        <h1>404 - Halaman Tidak Ditemukan</h1>
-        <a href="/">Kembali ke Dashboard</a>
-    `);
+if (process.env.NODE_ENV !== "test") {
 
-});
+    app.listen(PORT, () => {
 
-/* ==========================================
-   Server
-========================================== */
-
-app.listen(PORT, () => {
-
-    console.log(`
+        console.log(`
 ==========================================
  Dashboard Akademik Berjalan
 ==========================================
@@ -122,6 +77,14 @@ app.listen(PORT, () => {
  Status : Running
 
 ==========================================
-`);
+        `);
 
-});
+    });
+
+}
+
+/* =========================================
+   EXPORT APP
+========================================= */
+
+module.exports = app;
